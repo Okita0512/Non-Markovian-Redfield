@@ -16,8 +16,6 @@ from Methods.Redfield_Mat import func             # the fastest one, use this
 from Models.SpinBoson_Ohmic import parameters  
 # from Models.SpinBoson_Debye import parameters
 # from Models.FMO import parameters
-# from Models.Revival import parameters
-# from Models.VSC import parameters  
 
 # ==============================================================================================
 #                                       Parameters passing     
