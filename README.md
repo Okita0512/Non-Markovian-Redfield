@@ -7,7 +7,7 @@ Wenxiang Ying, wying3@ur.rochester.edu
 Kaiyue Peng, kaiyue_peng@berkeley.edu
 
 This is a Non-Markovian Redfield equation code composed in python, a bunch of example model systems and results are also attached. 
-To run the code, simply modify the "run.py" file with a method and a model desired (which can also be modified accordingly), and type "python3 run.py". 
+To run the code, simply modify the "run.py" file with a method and a model desired (which can also be modified accordingly), and type "python3 run.py" at your terminal (can be your local machine). 
 
 There are several different ways of numerical implementation for this method. 
 Usually, one suffers from the computational cost of constructing the Redfield tensor and calculating the tensor-matrix product, which are usually achieved using 4-fold cycles, making the algorithm complexity at least O(N^4).
