@@ -58,10 +58,6 @@ N_out = NSteps//nskip + dd      # number of data points to record
 #                                       Initialization     
 # ==============================================================================================
 
-# ======== switching qmds to the adiabatic representation ======== 
-for i in range(nmod):           
-    qmds[i, :, :] = U.T.conjugate() @ qmds[i, :, :] @ U
-
 # ======== switching rho0 to the adiabatic representation ======== 
 rho0_ad = U.T.conjugate() @ rho0 @ U
 
