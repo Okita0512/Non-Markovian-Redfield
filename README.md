@@ -1,4 +1,6 @@
-# First released on 07/19/2024
+# Non-Markovian Redfield Equation for Open Quantum System Dynamics
+
+First released on 07/19/2024
 
 Authors: 
 
