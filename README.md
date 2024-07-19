@@ -1,7 +1,9 @@
 # First released on 07/19/2024
 
 Authors: 
+
 Wenxiang Ying, wying3@ur.rochester.edu
+
 Kaiyue Peng, kaiyue_peng@berkeley.edu
 
 This is a Non-Markovian Redfield equation code composed in python, a bunch of example model systems and results are also attached. 
