@@ -15,3 +15,4 @@ There are several different ways of numerical implementation for this method.
 Usually, one suffers from the computational cost of constructing the Redfield tensor and calculating the tensor-matrix product, which are usually achieved using 4-fold cycles, making the algorithm complexity at least O(N^4).
 Here instead of using 4-fold cycles, we construct the Redfield tensor using np.kron, calculate tensor-matrix product using np.einsum, and update the Redfield tensor on-the-fly, which is very fast (see the "Redfield_Mat.py" file).
 
+Update on 07/20/2024 with a tutorial note pdf file.
