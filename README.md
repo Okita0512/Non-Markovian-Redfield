@@ -16,3 +16,33 @@ Usually, one suffers from the computational cost of constructing the Redfield te
 Here instead of using 4-fold cycles, we construct the Redfield tensor using np.kron, calculate tensor-matrix product using np.einsum, and update the Redfield tensor on-the-fly, which is very fast (see the "Redfield_Mat.py" file).
 
 Update on 07/20/2024 with a tutorial note pdf file.
+
+## Constant-bias time-dependent polaron NZ2
+
+The repository now also contains a constant-bias implementation of the
+identity-initialized time-dependent polaron Nakajima-Zwanzig equation for the
+longitudinal spin-boson model.  It can run the existing classic Ohmic and Debye
+benchmark parameter sets (models 3-19) without introducing a Landau-Zener
+sweep.
+
+A quick comparison of the time-dependent and static polaron frames is:
+
+```bash
+python run_tdpolaron.py --model 8 --method both --dt 0.01 --tmax 5 --plot
+```
+
+A production-resolution run using the time step stored with model 8 is:
+
+```bash
+python run_tdpolaron.py --model 8 --method td
+```
+
+The direct nonstationary memory integral scales as O(N_t^2), so production
+runs can be substantially more expensive than the original TCL2/Redfield
+script.  When Numba is installed, `--backend auto` (the default) uses a JIT-
+compiled kernel; `--backend numpy` is always available as a dependency-free
+fallback.  Outputs and numerical diagnostics are written under
+`Results/TDPolaron/`.
+
+See [`TD_POLARON.md`](TD_POLARON.md) for equations, Hamiltonian conventions,
+model mapping, validation tests, and physical limitations.
